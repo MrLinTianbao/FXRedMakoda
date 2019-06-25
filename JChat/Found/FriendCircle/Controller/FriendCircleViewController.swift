@@ -29,7 +29,9 @@ class FriendCircleViewController: CTViewController {
     
     fileprivate var commentIndex = 0 //评论cell位置
     
-    fileprivate var cellIndex = 0
+    fileprivate var replyIndex = 0
+    
+    fileprivate var titleText = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -177,15 +179,27 @@ class FriendCircleViewController: CTViewController {
 extension FriendCircleViewController : FriendCircleCellDelegate {
     
     
+    func replyAction(cellIndex: Int, index: Int, title:String) {
+        
+        commentIndex = cellIndex
+        replyIndex = index
+        titleText = title
+        
+        self.chatKeyBoard.keyboardUpforComment()
+    }
+    
+    
+    
     func cellHeight(height: CGFloat, indexPath: IndexPath) {
         
     }
     
     
     //MARK: 评论
-    func commentAction(index:Int) {
+    func commentAction(index:Int, title:String) {
         
         commentIndex = index
+        titleText = title
         
         self.chatKeyBoard.keyboardUpforComment()
     }
@@ -359,8 +373,12 @@ extension FriendCircleViewController : ChatKeyBoardDelegate,ChatKeyBoardDataSour
     
     func chatKeyBoardSendText(_ text: String!) {
         
-        commentArray[commentIndex].append(text)
-        tableView.reloadData()
+        
+           
+            commentArray[commentIndex].append(text)
+            tableView.reloadData()
+            
+        
         
         chatKeyBoard.keyboardDownForComment()
     }

@@ -10,8 +10,8 @@ import UIKit
 
 protocol FriendCircleCellDelegate: class {
     func cellHeight(height:CGFloat,indexPath:IndexPath)
-    func commentAction(index:Int) //评论
-    func replyAction(cellIndex:Int,index:Int) //回复
+    func commentAction(index:Int,title:String) //评论
+    func replyAction(cellIndex:Int,index:Int,title:String) //回复
 }
 
 class FriendCircleCell: UITableViewCell {
@@ -133,7 +133,7 @@ class FriendCircleCell: UITableViewCell {
     //MARK: 评论
     @IBAction func commentAction(_ sender: UIButton) {
         
-        self.delegate?.commentAction(index: sender.tag)
+        self.delegate?.commentAction(index: sender.tag, title: "评论")
     }
     
 }
@@ -182,7 +182,7 @@ extension FriendCircleCell : UITableViewDataSource,UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        self.delegate?.replyAction(cellIndex: cellIndex, index: indexPath.row)
+        self.delegate?.replyAction(cellIndex: cellIndex, index: indexPath.row, title: "回复")
         
     }
 }
