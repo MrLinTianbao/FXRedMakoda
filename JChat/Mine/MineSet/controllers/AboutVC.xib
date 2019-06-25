@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AboutVC" customModule="JChat" customModuleProvider="target">
+            <connections>
+                <outlet property="txvTips" destination="SXU-9y-vQP" id="3qc-Uh-yqL"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fHw-lI-Wm7">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="富信LOGO" translatesAutoresizingMaskIntoConstraints="NO" id="2Sa-qv-Ht9">
+                            <rect key="frame" x="157.5" y="50" width="60" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="Cbq-Ji-3Lj"/>
+                                <constraint firstAttribute="width" constant="60" id="dTA-ht-WxI"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="富信社交" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fjo-wZ-egc">
+                            <rect key="frame" x="158.5" y="118" width="58" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="fontColor" value="dark"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="SXU-9y-vQP">
+                            <rect key="frame" x="20" y="155" width="335" height="492"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="2Sa-qv-Ht9" firstAttribute="centerX" secondItem="fHw-lI-Wm7" secondAttribute="centerX" id="2TH-br-jxL"/>
+                        <constraint firstItem="2Sa-qv-Ht9" firstAttribute="top" secondItem="fHw-lI-Wm7" secondAttribute="top" constant="50" id="6j5-FZ-SMe"/>
+                        <constraint firstAttribute="bottom" secondItem="SXU-9y-vQP" secondAttribute="bottom" constant="20" id="Jcf-E6-4dI"/>
+                        <constraint firstAttribute="trailing" secondItem="SXU-9y-vQP" secondAttribute="trailing" constant="20" id="PES-1Q-vNn"/>
+                        <constraint firstItem="SXU-9y-vQP" firstAttribute="top" secondItem="fjo-wZ-egc" secondAttribute="bottom" constant="20" id="RLY-if-Qn5"/>
+                        <constraint firstItem="SXU-9y-vQP" firstAttribute="leading" secondItem="fHw-lI-Wm7" secondAttribute="leading" constant="20" id="XoH-en-rJB"/>
+                        <constraint firstItem="fjo-wZ-egc" firstAttribute="centerX" secondItem="fHw-lI-Wm7" secondAttribute="centerX" id="fvD-8z-qA1"/>
+                        <constraint firstItem="fjo-wZ-egc" firstAttribute="top" secondItem="2Sa-qv-Ht9" secondAttribute="bottom" constant="8" id="qRQ-ka-99Z"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="fHw-lI-Wm7" secondAttribute="trailing" id="KNQ-V2-aR3"/>
+                <constraint firstItem="fHw-lI-Wm7" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="MHh-zv-E0s"/>
+                <constraint firstItem="fHw-lI-Wm7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Yzx-gk-e2u"/>
+                <constraint firstAttribute="bottom" secondItem="fHw-lI-Wm7" secondAttribute="bottom" id="sNQ-gD-fT8"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="42" y="156"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="富信LOGO" width="60" height="60"/>
+    </resources>
+</document>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FoundViewController" customModule="JChat" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sat-FR-0qy">
+                    <rect key="frame" x="16" y="36" width="343" height="200"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="hip-Nx-xV2"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="FriendCircle:" destination="-1" eventType="touchUpInside" id="Imj-i6-7AJ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="khV-qN-myK">
+                    <rect key="frame" x="16" y="252" width="343" height="200"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="noticeAction:" destination="-1" eventType="touchUpInside" id="w3c-By-zE5"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="friendCircle" translatesAutoresizingMaskIntoConstraints="NO" id="fcL-Io-p1H">
+                    <rect key="frame" x="157.5" y="70" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="eUi-Ck-VYP"/>
+                        <constraint firstAttribute="width" constant="60" id="u5X-VX-paW"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="朋友圈" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6g-JZ-EhK">
+                    <rect key="frame" x="160" y="133" width="55.5" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="OdT-at-CFp"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="10" id="vBY-gm-Obk"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="公告" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sqG-LD-7Si">
+                    <rect key="frame" x="166.5" y="356" width="42" height="26"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="42" id="PNy-3J-FrN"/>
+                        <constraint firstAttribute="height" constant="26" id="TPR-ze-geJ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="notice" translatesAutoresizingMaskIntoConstraints="NO" id="OKA-bW-U2y">
+                    <rect key="frame" x="157.5" y="291" width="60" height="60"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="k6g-JZ-EhK" firstAttribute="top" secondItem="fcL-Io-p1H" secondAttribute="bottom" constant="3" id="1ES-gr-69k"/>
+                <constraint firstItem="khV-qN-myK" firstAttribute="top" secondItem="OKA-bW-U2y" secondAttribute="bottom" constant="-99" id="EhT-lN-jZx"/>
+                <constraint firstItem="khV-qN-myK" firstAttribute="top" secondItem="Sat-FR-0qy" secondAttribute="bottom" constant="16" id="HMf-WR-rSV"/>
+                <constraint firstItem="OKA-bW-U2y" firstAttribute="centerX" secondItem="khV-qN-myK" secondAttribute="centerX" id="Iqn-MH-YiC"/>
+                <constraint firstItem="sqG-LD-7Si" firstAttribute="centerX" secondItem="OKA-bW-U2y" secondAttribute="centerX" id="QnJ-Kl-Qtl"/>
+                <constraint firstItem="k6g-JZ-EhK" firstAttribute="centerX" secondItem="fcL-Io-p1H" secondAttribute="centerX" id="RQu-l4-p5d"/>
+                <constraint firstItem="Sat-FR-0qy" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="SCG-bc-tIa"/>
+                <constraint firstItem="khV-qN-myK" firstAttribute="leading" secondItem="Sat-FR-0qy" secondAttribute="leading" id="Tv8-HZ-MA2"/>
+                <constraint firstItem="khV-qN-myK" firstAttribute="trailing" secondItem="Sat-FR-0qy" secondAttribute="trailing" id="aGT-8Y-hkm"/>
+                <constraint firstItem="fcL-Io-p1H" firstAttribute="centerX" secondItem="Sat-FR-0qy" secondAttribute="centerX" id="d5z-AM-ULX"/>
+                <constraint firstItem="Sat-FR-0qy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="jJs-nk-gB6"/>
+                <constraint firstItem="khV-qN-myK" firstAttribute="height" secondItem="Sat-FR-0qy" secondAttribute="height" id="jQy-j8-2Y0"/>
+                <constraint firstItem="sqG-LD-7Si" firstAttribute="top" secondItem="OKA-bW-U2y" secondAttribute="bottom" constant="5" id="nPq-pt-px8"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Sat-FR-0qy" secondAttribute="trailing" constant="16" id="nkE-6r-Guq"/>
+                <constraint firstItem="OKA-bW-U2y" firstAttribute="height" secondItem="fcL-Io-p1H" secondAttribute="height" id="pZM-5q-5KL"/>
+                <constraint firstItem="fcL-Io-p1H" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="qRc-S1-tTc"/>
+                <constraint firstItem="OKA-bW-U2y" firstAttribute="width" secondItem="fcL-Io-p1H" secondAttribute="width" id="uKf-8n-wCy"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="-127" y="103"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="friendCircle" width="60" height="60"/>
+        <image name="notice" width="60" height="60"/>
+    </resources>
+</document>

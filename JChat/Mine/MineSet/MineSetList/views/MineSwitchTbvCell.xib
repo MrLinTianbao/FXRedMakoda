@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="174" id="KGk-i7-Jjw" customClass="MineSwitchTbvCell" customModule="JChat" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="417" height="174"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="417" height="173.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g5J-PQ-OkB">
+                        <rect key="frame" x="0.0" y="0.0" width="417" height="173.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="钱包" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B0N-FK-Ou0">
+                                <rect key="frame" x="16" y="78.5" width="29" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="fontColor" value="dark"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bdx-Dn-MS5">
+                                <rect key="frame" x="350" y="71.5" width="51" height="31"/>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Bdx-Dn-MS5" firstAttribute="centerY" secondItem="g5J-PQ-OkB" secondAttribute="centerY" id="Da5-H6-Dze"/>
+                            <constraint firstItem="B0N-FK-Ou0" firstAttribute="centerY" secondItem="g5J-PQ-OkB" secondAttribute="centerY" id="ozC-Xa-zxb"/>
+                            <constraint firstItem="B0N-FK-Ou0" firstAttribute="leading" secondItem="g5J-PQ-OkB" secondAttribute="leading" constant="16" id="ugE-gF-7bk"/>
+                            <constraint firstAttribute="trailing" secondItem="Bdx-Dn-MS5" secondAttribute="trailing" constant="18" id="wgE-ya-B97"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="g5J-PQ-OkB" secondAttribute="trailing" id="Efg-SG-dOW"/>
+                    <constraint firstAttribute="bottom" secondItem="g5J-PQ-OkB" secondAttribute="bottom" id="dIf-KZ-2Lr"/>
+                    <constraint firstItem="g5J-PQ-OkB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="f8A-0V-vYc"/>
+                    <constraint firstItem="g5J-PQ-OkB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="pi9-qg-e1V"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="labTitle" destination="B0N-FK-Ou0" id="Dcw-SH-6dD"/>
+                <outlet property="switchFlag" destination="Bdx-Dn-MS5" id="5b5-1b-X6L"/>
+            </connections>
+            <point key="canvasLocation" x="-119" y="50"/>
+        </tableViewCell>
+    </objects>
+</document>
